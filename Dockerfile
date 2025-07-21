@@ -4,9 +4,9 @@ RUN set -ex \
 	&& apt-get update \
 	&& apt-get install -qq --no-install-recommends ca-certificates wget
 
-ENV BITCOIN_VERSION=25.2
+ENV BITCOIN_VERSION=29.0
 ENV BITCOIN_URL=https://bitcoincore.org/bin/bitcoin-core-$BITCOIN_VERSION/bitcoin-$BITCOIN_VERSION-x86_64-linux-gnu.tar.gz \
-	BITCOIN_SHA256=8d8c387e597e0edfc256f0bbace1dac3ad1ebf4a3c06da3e2975fda333817dea
+	BITCOIN_SHA256=a681e4f6ce524c338a105f214613605bac6c33d58c31dc5135bbc02bc458bb6c
 
 RUN set -ex \
 	&& cd /tmp \
