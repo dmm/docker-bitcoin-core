@@ -17,7 +17,7 @@ RUN set -ex \
 
 FROM debian:bookworm-slim
 COPY --from=builder /usr/local/bin/bitcoind /usr/local/bin/bitcoin-cli /usr/local/bin/
-RUN groupadd -r bitcoin && useradd -r -m -g bitcoin bitcoin \
+RUN groupadd -g 1234 -r bitcoin && useradd -u 1234 -r -m -g bitcoin bitcoin \
 	&& ln -s /usr/local/bin/bitcoin-cli /usr/local/bin/c
 
 ENV BITCOIN_DATA=/data
